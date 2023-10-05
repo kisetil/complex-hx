@@ -1,6 +1,6 @@
 {
     "name": "complex",
-    "url" : "https://github.com/jasononeil/useless/",
+    "url" : "https://github.com/kisetil/complex-hx.git",
     "license": "MIT",
     "tags": ["math", "cross"],
     "description": "Complex Number Library Implementation for Haxe.",
