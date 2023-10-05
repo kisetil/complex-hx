@@ -1,0 +1,11 @@
+{
+    "name": "complex",
+    "url" : "https://github.com/jasononeil/useless/",
+    "license": "MIT",
+    "tags": ["math", "cross"],
+    "description": "Complex Number Library Implementation for Haxe.",
+    "version": "0.0.1",
+    "classPath": "src/",
+    "releasenote": "Initial release supporting basic complex math operations",
+    "contributors": ["kisetil"]
+  }
