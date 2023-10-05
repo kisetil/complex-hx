@@ -7,7 +7,6 @@ Complex is implemented in Haxe, leveraging the power of abstract classes and ope
 ## Features
 
 - Arithmetic operations for complex numbers, including addition, subtraction, multiplication, and division.
-
 - Square root function.
 - Exponential function.
 - Polar coordinate conversion.
