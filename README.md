@@ -21,7 +21,7 @@ haxelib install complex
 ```
 or directly from git repository:
 ```sh
-haxelib git complex https://
+haxelib git complex https://github.com/kisetil/complex-hx.git
 ```
 
 
