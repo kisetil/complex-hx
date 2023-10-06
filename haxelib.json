@@ -6,6 +6,6 @@
     "description": "Complex Number Library Implementation for Haxe.",
     "version": "0.0.2",
     "classPath": "src/",
-    "releasenote": "Added new function: pow, log",
+    "releasenote": "Added new functions: pow, log",
     "contributors": ["kisetil"]
   }
