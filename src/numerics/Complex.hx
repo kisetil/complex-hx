@@ -5,7 +5,7 @@ typedef ComplexType = {
 	var imag:Float;
 }
 
-abstract Complex(ComplexType) {
+abstract Complex(ComplexType) from ComplexType to ComplexType {
 	public var real(get, set):Float;
 	public var imag(get, set):Float;
 
@@ -47,6 +47,11 @@ abstract Complex(ComplexType) {
 	}
 
 	@:op(A - B)
+	inline function subWithFloat(x:Float):Complex {
+		return sumWithFloat(-x);
+	}
+
+	@:op(A - B)
 	inline function sub(z:Complex):Complex {
 		return new Complex(this.real - z.real, this.imag - z.imag);
 	}
@@ -56,10 +61,63 @@ abstract Complex(ComplexType) {
 		return new Complex((this.real * z.real) - (this.imag * z.imag), ((this.real * z.imag) + (this.imag * z.real)));
 	}
 
+	@:op(A * B)
+	inline function mulWithFloat(x:Float):Complex {
+		return new Complex(this.real * x, this.imag * x);
+	}
+
 	@:op(A / B)
 	inline function div(z:Complex):Complex {
 		var d = Complex.abs(z);
 		return new Complex((this.real * z.real + this.imag * z.imag) / d, (this.imag * z.real - this.real * z.imag) / d);
+	}
+
+	@:op(A / B)
+	inline function divWithFloat(x:Float):Complex {
+		trace(x, this.real * x, this.imag * x);
+		return mulWithFloat(1 / x);
+	}
+
+	// Assignment Operators
+
+	@:op(A += B)
+	inline function sumAsn(z:Complex):Complex {
+		return this = sum(z);
+	}
+
+	@:op(A += B)
+	inline function sumWithFloatAsm(x:Float):Complex {
+		return this = sumWithFloat(x);
+	}
+
+	@:op(A -= B)
+	inline function subAsn(z:Complex):Complex {
+		return this = sub(z);
+	}
+
+	@:op(A -= B)
+	inline function subWithFloatAsn(x:Float):Complex {
+		return this = subWithFloat(x);
+	}
+
+	@:op(A *= B)
+	inline function mulAsn(z:Complex):Complex {
+		return this = mul(z);
+	}
+
+	@:op(A *= B)
+	inline function mulWithFloatAsn(x:Float):Complex {
+		return this = mulWithFloat(x);
+	}
+
+	@:op(A /= B)
+	inline function divAsn(z:Complex):Complex {
+		return this = div(z);
+	}
+
+	@:op(A /= B)
+	inline function divWithFloatAsn(x:Float):Complex {
+		return this = divWithFloat(x);
 	}
 
 	/**
