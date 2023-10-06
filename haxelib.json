@@ -4,8 +4,8 @@
     "license": "MIT",
     "tags": ["math", "cross"],
     "description": "Complex Number Library Implementation for Haxe.",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "classPath": "src/",
-    "releasenote": "Initial release supporting basic complex math operations",
+    "releasenote": "Added new function: pow, log",
     "contributors": ["kisetil"]
   }
