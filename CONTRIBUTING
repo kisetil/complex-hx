@@ -6,7 +6,7 @@ To abide by the formatting of the source code, make sure your `hxformat.json` ha
 ```json
 {
 	"lineEnds": {
-		"leftCurly": "after",
+		"leftCurly": "both",
 		"rightCurly": "both",
 		"objectLiteralCurly": {
 			"leftCurly": "after"
