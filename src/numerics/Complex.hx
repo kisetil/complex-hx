@@ -1,4 +1,4 @@
-package;
+package numerics;
 
 typedef ComplexType = {
 	var real:Float;
