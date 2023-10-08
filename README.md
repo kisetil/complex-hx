@@ -78,6 +78,7 @@ class Test
 	}
 }
 ```
+You can see it in action and even play around with it [here!](https://try.haxe.org/#8cD04a06)
 
 # Todo
 - Trigonometric functions such as sine, cosine, and tangent for complex arguments.
