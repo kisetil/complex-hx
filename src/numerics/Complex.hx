@@ -144,6 +144,12 @@ abstract Complex(ComplexType) from ComplexType to ComplexType
 		return this = divWithFloat(x);
 	}
 
+	@:op(A == B)
+	inline function equals(z:Complex):Bool
+	{
+		return this.real == z.real && this.imag == z.imag;
+	}
+
 	/**
 		Constructs a complex number from magnitude and phase angle
 	**/
